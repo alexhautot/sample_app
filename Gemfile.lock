@@ -44,8 +44,9 @@ GEM
       tzinfo (~> 1.1)
     ansi (1.5.0)
     arel (9.0.0)
-    autoprefixer-rails (9.6.1)
+    autoprefixer-rails (9.6.1.1)
       execjs
+    bcrypt (3.1.13)
     bindex (0.8.1)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
@@ -67,6 +68,7 @@ GEM
     duktape (2.3.0.0)
     erubi (1.8.0)
     execjs (2.7.0)
+    ffi (1.11.1)
     ffi (1.11.1-x64-mingw32)
     formatador (0.2.5)
     globalid (0.4.2)
@@ -114,14 +116,18 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
+    msgpack (1.3.1)
     msgpack (1.3.1-x64-mingw32)
     nenv (0.3.0)
     nio4r (2.4.0)
+    nokogiri (1.10.4)
+      mini_portile2 (~> 2.4.0)
     nokogiri (1.10.4-x64-mingw32)
       mini_portile2 (~> 2.4.0)
     notiffany (0.1.3)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    pg (1.1.4)
     pg (1.1.4-x64-mingw32)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -169,8 +175,8 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    sass-rails (5.0.7)
-      railties (>= 4.0.0, < 6)
+    sass-rails (5.1.0)
+      railties (>= 5.2.0)
       sass (~> 3.1)
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
@@ -206,9 +212,11 @@ GEM
     websocket-extensions (0.1.4)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
+  bcrypt (= 3.1.13)
   bootsnap (>= 1.1.0)
   bootstrap-sass (= 3.3.7)
   byebug
